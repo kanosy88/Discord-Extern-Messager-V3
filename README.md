@@ -1,5 +1,8 @@
 # Discord-Extern-Messager-V3
-It is an application external to Discord to send messages remotely using the Token and URL of the talk page under Python. ////////////////////////// import requests import PySimpleGUI import pickle
+It is an application external to Discord to send messages remotely using the Token and URL of the talk page under Python. 
+## Import
+import requests 
+import PySimpleGUI import pickle
 
 ## How to use it?
 Your Token = Your token
