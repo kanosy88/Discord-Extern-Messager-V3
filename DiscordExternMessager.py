@@ -20,6 +20,8 @@ def sendMessage(message):
     }
 
     r = requests.post(i, data=payload, headers=header)
+    
+    return r
 
 def addNewChannel(victime, channelURL):
     channel.append(victime)
@@ -47,7 +49,8 @@ layout = [  [sg.Text('Discord Messager')],
             [sg.Button('Ok'), sg.Button('Cancel')],
             [sg.Text('Username'), sg.InputText()],
             [sg.Text('Url of channel'), sg.InputText()],
-            [sg.Button('Save'), sg.Button('Load')]]
+            [sg.Button('Save'), sg.Button('Load')]
+         ]
 
 
 window = sg.Window('Window Title', layout)
@@ -59,7 +62,7 @@ while True:
     if event in (sg.Button, 'Ok'):
         sendMessage(values[1])
     else:
-        print("")
+        continue
     if event in (sg.Button, 'Save'):
         print('save')
         addNewChannel(values[2], values[3])
